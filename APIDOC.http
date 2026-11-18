@@ -1,0 +1,88 @@
+###
+
+GET http://127.0.0.1:8000/jobs/
+Accept: application/json 
+
+###
+POST http://127.0.0.1:8000/jobs/
+Content-Type: application/json
+
+{
+    "employer" : "Google",
+    "title" : "Backend Developer",
+    "description" : "demo",
+    "category" : "sales",
+    "experience_level" : "mid",
+    "location" : "blr",
+    "is_open" : true
+}
+
+###
+
+GET http://127.0.0.1:8000/jobs/2/
+Accept: application/json 
+
+###
+PUT http://127.0.0.1:8000/jobs/2/
+Content-Type: application/json
+
+{
+    "employer" : "Wipro",
+    "title" : "Frontend Developer",
+    "description" : "demo",
+    "category" : "software",
+    "experience_level" : "fresher",
+    "location" : "Kochi",
+    "is_open" : false
+}
+
+###
+DELETE http://127.0.0.1:8000/jobs/2/
+Accept: application/json
+
+
+###
+GET http://127.0.0.1:8000/applications/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/applications/
+Content-Type: application/json
+
+{
+    "job_id": 1,
+    "candidate_name": "Jisna",
+    "mobile_no": 9856487423,
+    "place": "Kochi",
+    "cover_letter" : "demo"
+}
+
+###
+PUT http://127.0.0.1:8000/applications/2/
+Content-Type: application/json
+
+{
+    "job_id": 2,
+    "candidate_name": "jith",
+    "mobile_no": 8756487423,
+    "place": "Kochi",
+    "cover_letter" : "demo application"
+}
+
+###
+DELETE http://127.0.0.1:8000/applications/1/
+Accept: application/json
+
+
+
+
+
+
+###
+PUT http://127.0.0.1:8000/applications/2/review/
+Content-Type: application/json
+
+{
+    "status" : "shortlisted",
+    "remarks" : "good"
+}
